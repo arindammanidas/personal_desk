@@ -1,0 +1,103 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PersonalDesk
+</name>
+</assembly>
+<members>
+<member name="M:PersonalDesk.RssConfigWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.RssConfigWindow">
+	<summary>
+RssConfigWindow
+</summary>
+</member><member name="M:PersonalDesk.LockWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.LockWindow">
+	<summary>
+LockWindow
+</summary>
+</member><member name="M:PersonalDesk.JournalWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.JournalWindow">
+	<summary>
+JournalWindow
+</summary>
+</member><member name="M:PersonalDesk.CalendarWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.CalendarWindow">
+	<summary>
+CalendarWindow
+</summary>
+</member><member name="M:PersonalDesk.MainWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.MainWindow">
+	<summary>
+MainWindow
+</summary>
+</member><member name="M:PersonalDesk.App.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="M:PersonalDesk.App.Main">
+	<summary>
+Application Entry Point.
+</summary>
+</member><member name="T:PersonalDesk.App">
+	<summary>
+App
+</summary>
+</member><member name="M:PersonalDesk.aboutWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.aboutWindow">
+	<summary>
+aboutWindow
+</summary>
+</member><member name="M:PersonalDesk.NotesWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.NotesWindow">
+	<summary>
+NotesWindow
+</summary>
+</member><member name="M:PersonalDesk.LOCK.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.LOCK">
+	<summary>
+LOCK
+</summary>
+</member><member name="M:PersonalDesk.DrawingWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.DrawingWindow">
+	<summary>
+DrawingWindow
+</summary>
+</member><member name="M:PersonalDesk.PhoneWindow.InitializeComponent">
+	<summary>
+InitializeComponent
+</summary>
+</member><member name="T:PersonalDesk.PhoneWindow">
+	<summary>
+PhoneWindow
+</summary>
+</member>
+</members>
+</doc>

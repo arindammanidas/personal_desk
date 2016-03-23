@@ -1,0 +1,27 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="CalendarWindow"
+	x:Name="Window"
+	Title="CalendarWindow"
+	Width="640" Height="480" Topmost="True" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" ShowInTaskbar="False">
+
+	<Grid x:Name="LayoutRoot">
+        <Rectangle Height="199" HorizontalAlignment="Left" Margin="310,105,0,0" Name="Rectangle1" VerticalAlignment="Top" Width="201" Fill="#FFD7FF7C" RadiusY="14" RadiusX="14" >
+        	<Rectangle.Effect>
+        		<DropShadowEffect/>
+        	</Rectangle.Effect>
+        </Rectangle>
+        <Calendar Margin="286,125,0,0" HorizontalAlignment="Left" Width="247" Height="209" VerticalAlignment="Top" Name="Calendar1">
+			<Calendar.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFFFD200" Offset="0.117"/>
+					<GradientStop Color="#FFECF0F4" Offset="0.209"/>
+					<GradientStop Color="#FFFCFCFD" Offset="0.209"/>
+					<GradientStop Color="White" Offset="1"/>
+				</LinearGradientBrush>
+			</Calendar.Background>
+		</Calendar>
+        <Label Content="CALENDAR" Height="24" Margin="378,105,0,0" Name="Label1" VerticalAlignment="Top" FontWeight="Bold" FontStyle="Normal" HorizontalAlignment="Left" Width="85" />
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="aboutWindow"
+	x:Name="Window"
+	Title="aboutWindow"
+	Width="800" Height="600" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen">
+
+	<Grid x:Name="LayoutRoot">
+		<Rectangle Margin="98.5,110,0,0" Stroke="Black" RadiusY="25.5" RadiusX="25.5" HorizontalAlignment="Left" Width="449.5" Height="270" VerticalAlignment="Top" Name="aboutRec">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+					<GradientStop Color="#FF0061FF" Offset="0.176"/>
+					<GradientStop Color="White" Offset="1"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Image Margin="113,133,0,0" Source="pdesklogo.png" Stretch="Fill" Height="113" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175.248" d:LayoutOverrides="VerticalAlignment"/>
+		<TextBlock Margin="292.248,157,0,0" TextWrapping="Wrap" Height="100" VerticalAlignment="Top" HorizontalAlignment="Left" Width="221" Foreground="White" FontFamily="/PersonalDesk;component/Fonts/#Tahoma" TextAlignment="Justify"><Run Text="&quot;Personal Desk&quot; is a multi-utility application developed by Arindam Mani Das. It is meant to serve as the final semester project for BCA degree of Sikkim Manipal University, India. Anybody using it for commercial purposes is liable to be punished by law."/><LineBreak/><Run/><LineBreak/><Run Text=""/></TextBlock>
+		<TextBlock Margin="158,257,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="355.248" Height="39" VerticalAlignment="Top" FontSize="13.333" TextAlignment="Center" d:LayoutOverrides="VerticalAlignment"><Run Text="&quot;The best way to predict the future is to create it&quot; "/><LineBreak/><Run Text="-- Abraham Lincoln"/></TextBlock>
+		<TextBlock Height="48" Margin="189,309,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" HorizontalAlignment="Left" Width="293.248"><Run Text="Arindam Mani Das"/><LineBreak/><Run Text="arindammanidas@gmail.com"/><LineBreak/><Run Text="+919401148669"/></TextBlock>
+		<Button Content="" HorizontalAlignment="Left" Height="58" Margin="515,83,0,0" Style="{DynamicResource ButtonStyle34}" VerticalAlignment="Top" Width="60.735" ToolTip="Close" Name="Button1" />
+	</Grid>
+</Window>

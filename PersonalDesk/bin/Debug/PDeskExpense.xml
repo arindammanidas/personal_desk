@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Expense>
+    <exDate>5/27/2011</exDate>
+    <exSpentOn>xxxx</exSpentOn>
+    <exAmount>eeee</exAmount>
+    <exCategory />
+  </Expense>
+  <Expense>
+    <exDate>5/27/2011</exDate>
+    <exSpentOn>sss</exSpentOn>
+    <exAmount>sss</exAmount>
+    <exCategory />
+  </Expense>
+  <Expense>
+    <exDate>5/28/2011</exDate>
+    <exSpentOn>aaa</exSpentOn>
+    <exAmount>aaaaa</exAmount>
+    <exCategory />
+  </Expense>
+  <Expense>
+    <exDate>5/30/2011</exDate>
+    <exSpentOn>rrr</exSpentOn>
+    <exAmount>rrr</exAmount>
+    <exCategory />
+  </Expense>
+</NewDataSet>

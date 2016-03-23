@@ -1,0 +1,112 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="MainWindow"
+	x:Name="PDesk"
+	Title="Personal Desk"
+	Width="800" Height="600" Background="{x:Null}" Visibility="Visible" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Icon="/PersonalDesk;component/PDesk.ico">
+	<Window.Resources>
+		<Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Rectangle Fill="{x:Null}"/>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="-" ToolTip="Minimize"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsFocused" Value="True"/>
+							<Trigger Property="IsDefaulted" Value="True"/>
+							<Trigger Property="IsMouseOver" Value="True"/>
+							<Trigger Property="IsPressed" Value="True"/>
+							<Trigger Property="IsEnabled" Value="False"/>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonStyle2" TargetType="{x:Type Button}"/>
+	</Window.Resources>
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.62*"/>
+			<RowDefinition Height="0.38*"/>
+		</Grid.RowDefinitions>
+		<Rectangle Stroke="Black" Grid.RowSpan="2" Name="recWindow" Opacity="{Binding ElementName=opacitySlider, Path=Value}">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+					<GradientStop Color="#FFFFF500" Offset="0.176"/>
+					<GradientStop Color="White" Offset="1"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle Fill="DarkOrange" Height="80" Margin="256,40,0,0" VerticalAlignment="Top" Stroke="White">
+			<Rectangle.Effect>
+				<BlurEffect/>
+			</Rectangle.Effect>
+		</Rectangle>
+		<Rectangle Margin="0,40,0,0" Height="80" VerticalAlignment="Top" Fill="#FFFFAF00" HorizontalAlignment="Left" Width="265" Stroke="White">
+			<Rectangle.Effect>
+				<BlurEffect/>
+			</Rectangle.Effect>
+		</Rectangle>
+		<TextBlock Height="34" Margin="37,51,0,0" TextWrapping="Wrap" Text="Personal Desk" VerticalAlignment="Top" FontSize="29.333" FontStyle="Italic" FontFamily="/PersonalDesk;component/Fonts/#SketchFlow Print" FontWeight="Bold" Foreground="White" HorizontalAlignment="Left" Width="228"/>
+		<TextBlock Height="26" Margin="37,85,0,0" TextWrapping="Wrap" Text="simplifying tasks... " VerticalAlignment="Top" Foreground="White" FontFamily="/PersonalDesk;component/Fonts/#SketchFlow Print" FontSize="16" TextAlignment="Center" HorizontalAlignment="Left" Width="228"/>
+		<Button x:Name="button" Content="-" HorizontalAlignment="Right" Height="40" Margin="0,0,39,0" Style="{DynamicResource ButtonStyle3}" VerticalAlignment="Top" Width="41" FontSize="24" FontFamily="/PersonalDesk;component/Fonts/#Tempus Sans ITC" FontWeight="Bold" ToolTip="Minimize" Click="button_Click">
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0"/>
+					<GradientStop Color="#FFE3E5F0" Offset="0.5"/>
+					<GradientStop Color="#FFFFAF00" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+		<Button x:Name="button1" Content="x" HorizontalAlignment="Right" Height="40" Style="{DynamicResource ButtonStyle4}" VerticalAlignment="Top" Width="39" FontFamily="/PersonalDesk;component/Fonts/#Tempus Sans ITC" FontSize="24" ToolTip="Close" />
+        <Rectangle Fill="#FFB4FF36" Margin="0,0,0,146.28" Grid.Row="1" Height="59.844" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="336.376" RadiusY="13.173" RadiusX="13.173" Stroke="White">
+        	<Rectangle.Effect>
+        		<BlurEffect/>
+        	</Rectangle.Effect>
+        </Rectangle>
+		<Rectangle Margin="0,0,0,88.5" Grid.Row="1" Fill="#FFFEAE00" Stroke="White" Height="75.78" VerticalAlignment="Bottom">
+			<Rectangle.Effect>
+				<BlurEffect/>
+			</Rectangle.Effect>
+		</Rectangle>
+		<Slider HorizontalAlignment="Right" Height="22" Margin="0,0,32.75,52.28" Grid.Row="1" VerticalAlignment="Bottom" Width="152" Minimum="0.5" Maximum="1" Value="0.8" Foreground="#FFFFA600" Name="opacitySlider" AutoToolTipPlacement="None" TickFrequency="0.1" ToolTip="Transparency" />
+        <TextBlock Height="50" Margin="357.627,61,43.5,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="18" FontFamily="/PersonalDesk;component/Fonts/#Agency FB" TextAlignment="Center" Name="rssBlock" FontStyle="Normal" Text="&lt;&lt;  Click the button to view RSS feeds." Cursor="Hand" ToolTip="Click to view full story" />
+		<TextBlock Margin="0,0,21.75,88.28" Grid.Row="1" TextWrapping="Wrap" Text="12:00 AM" FontFamily="/PersonalDesk;component/Fonts/#Arial Rounded MT Bold" FontSize="48" TextAlignment="Center" Foreground="White" HorizontalAlignment="Right" Width="238.25" VerticalAlignment="Bottom" Name="timeblock" Height="67">
+			<TextBlock.Effect>
+				<BlurEffect/>
+			</TextBlock.Effect>
+		</TextBlock>
+		<Button Content="" HorizontalAlignment="Left" Height="70.5" Margin="50,0,0,114.624" Grid.Row="1" Style="{DynamicResource ButtonStyle5}" VerticalAlignment="Bottom" Width="54.5" ToolTip="Notes" Name="notesButton" />
+		<Button Content="" HorizontalAlignment="Left" Height="74" Margin="113,0,0,125.124" Grid.Row="1" Style="{DynamicResource ButtonStyle6}" VerticalAlignment="Bottom" Width="76.75" ToolTip="Scribble" Name="scribbleButton" />
+		<Button Content="" HorizontalAlignment="Left" Height="61.5" Margin="197,0,0,119.124" Grid.Row="1" Style="{DynamicResource ButtonStyle7}" VerticalAlignment="Bottom" Width="59.5" ToolTip="Calendar" Name="calendarButton" />
+		<Button Content="" HorizontalAlignment="Left" Height="66" Margin="260.5,0,0,114.624" Grid.Row="1" Style="{DynamicResource ButtonStyle8}" VerticalAlignment="Bottom" Width="63.124" d:LayoutOverrides="HorizontalAlignment" ToolTip="Journal" Name="journalButton" />
+		<Button Content="" HorizontalAlignment="Left" Height="66" Margin="327.624,0,0,119.124" Grid.Row="1" Style="{DynamicResource ButtonStyle9}" VerticalAlignment="Bottom" Width="60" ToolTip="Calls/SMS" Name="callButton" />
+        <Button Content="" HorizontalAlignment="Left" Height="75.124" Margin="394,0,0,106" Grid.Row="1" Style="{DynamicResource ButtonStyle11}" VerticalAlignment="Bottom" Width="60.703" ToolTip="Lock System" Name="lockButton" />
+		<Button Content="" HorizontalAlignment="Left" Height="90.627" Margin="265,8,0,0" Style="{DynamicResource ButtonStyle12}" VerticalAlignment="Top" Width="92.627" ToolTip="Configure RSS Feeds" Name="Button2" />
+        <TextBlock FontFamily="/PersonalDesk;component/Fonts/#SketchFlow Print" FontSize="24" Margin="0,0,32.75,170.124" Name="TextBlock1" Text="Hello User!" TextAlignment="Right" TextWrapping="Wrap" Height="29" VerticalAlignment="Bottom" Foreground="White" HorizontalAlignment="Right" Grid.Row="1" Width="283.626">
+        	<TextBlock.Effect>
+        		<DropShadowEffect/>
+        	</TextBlock.Effect>
+        </TextBlock>
+        <Button Content="" Height="59.746" Margin="357.627,16.254,0,0" Style="{DynamicResource ButtonStyle13}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="56" ToolTip="Load RSS feeds" Name="button3" />
+        <Image HorizontalAlignment="Right" Height="53.864" Margin="0,0,186.124,35.916" Source="dark_close_button1.png" Stretch="Fill" VerticalAlignment="Bottom" Width="52.376" Grid.Row="1" RenderTransformOrigin="0.5,0.5" ToolTip="Use the slider to set transparency">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="90"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Margin="296,192,288,13" Source="pdesklogo.png" Stretch="Uniform" Opacity="0.5"/>
+        <Button Content="" HorizontalAlignment="Right" Height="41" Margin="0,138,21.75,0" Style="{DynamicResource ButtonStyle32}" VerticalAlignment="Top" Width="37.297" ToolTip="About" Name="Button4" />
+        <Button Content="" HorizontalAlignment="Right" Height="41" Margin="0,192,21.75,0" Style="{DynamicResource ButtonStyle33}" VerticalAlignment="Top" Width="37.297" Name="Button5" ToolTip="Help" />
+    </Grid>
+</Window>

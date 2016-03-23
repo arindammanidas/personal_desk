@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity version="1.0.0.0" name="PersonalDesk.exe" publicKeyToken="a7f5c0cb5bc2ded0" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="PDesk.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PersonalDesk" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PersonalDesk.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet version="1" class="System.Security.NamedPermissionSet" Name="LocalIntranet" Description="Default rights given to applications on the local intranet" Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Expression.Drawing.dll" size="122880">
+      <assemblyIdentity name="Microsoft.Expression.Drawing" version="4.0.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>rUxD+M8zP3GKvtY6FZyDcUiy/Ng=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PersonalDesk.exe" size="4983808">
+      <assemblyIdentity name="PersonalDesk" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>cW3gg3F/fnKa0EPTgZm3CIrIgK4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="PDesk.ico" size="19518">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>0iFKxUQCvdp4zjrra9WgZ6UpIIc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=ARINDAM-LAPTOP\Du" issuerKeyHash="294e18045ba65b304c19f46b7c05c6fa9a3726af" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>Y7lU7h8NFQeF+3gBAn4DfD3xmck=</DigestValue></Reference></SignedInfo><SignatureValue>hk5Ildkl1AF/fzsG/zOy+T16c4ymd/QuZXkzOoChaLxcdobV31mXOe90eTvL/O4FBw/57XfHZHKQu9Io8wEyaqYc4pDaSl3I6IDwptjnPJN5Z2xI/CWkKzdG3moFhZMU5WMQzh/D4gp3GcBkJfm8MStiS8Fu4oLnA4C8p1AzRQk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>vUsTKrrkXJdgotCFL45CELP2nUqS8JSmlDnwUNu+EhEKiY3An8fwe6ND6L7YBlv1eOiQ7K/mVNANYLjTvf3N3nKa3pF6a0xGTLnaFGvtqiDn73rbfI1YjEnYonjK38aYg6IqM54B+WDTBkiI2XJXT04zB0QUreq86KdCnkGb2Fc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c999f13d7c037e020178fb8507150d1fee54b963" Description="" Url=""><as:assemblyIdentity version="1.0.0.0" name="PersonalDesk.exe" publicKeyToken="a7f5c0cb5bc2ded0" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ARINDAM-LAPTOP\Du</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>ZhPS7xv/6hgMQlKAGGyMEvBqQ1U=</DigestValue></Reference></SignedInfo><SignatureValue>SeS6zSM9VmV/B7CEq1w7bvovWH5VcW7ynvcGgqcTod/uX+HOjcKrfXZBCt/VgyhD6zW9IDLyHmXgPgSBhVmaOzuYUEusWLpXsdEpV9tGZWvXIluJxMd9SvcntV5HiQIT0nQYDp7hfMJfX8R8tlOvCiLQzHheHGarx+V6B8V6zGg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>vUsTKrrkXJdgotCFL45CELP2nUqS8JSmlDnwUNu+EhEKiY3An8fwe6ND6L7YBlv1eOiQ7K/mVNANYLjTvf3N3nKa3pF6a0xGTLnaFGvtqiDn73rbfI1YjEnYonjK38aYg6IqM54B+WDTBkiI2XJXT04zB0QUreq86KdCnkGb2Fc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAUKgAwIBAgIQBRbEZ5eJdIxB0PnR5iKhGzAJBgUrDgMCHQUAMC0xKzApBgNVBAMeIgBBAFIASQBOAEQAQQBNAC0ATABBAFAAVABPAFAAXABEAHUwHhcNMTEwNTMwMDUzODExWhcNMTIwNTI5MTEzODExWjAtMSswKQYDVQQDHiIAQQBSAEkATgBEAEEATQAtAEwAQQBQAFQATwBQAFwARAB1MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9SxMquuRcl2Ci0IUvjkIQs/adSpLwlKaUOfBQ274SEQqJjcCfx/B7o0PovtgGW/V46JDsr+ZU0A1guNO9/c3ecprekXprTEZMudoUa+2qIOfvett8jViMSdiieMrfxpiDoiozngH5YNMGSIjZcldPTjMHRBSt6rzop0KeQZvYVwIDAQABMAkGBSsOAwIdBQADgYEAjJYArBQmXrvdGzHU6Xjqlxp3MwoDAiKUN4OMyOZShDzJnvV6oreKffPK3tyutcU1tCDxGv84WSJOnlxZbeLqRswBmGbeXfD1EgE0m86TmeYkw0ad3GxjbcFuRF4cgCO9TEgrtsPhWfhQi+twVvl8Z4Z34gZaf+D/ngEZs6vOl+0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

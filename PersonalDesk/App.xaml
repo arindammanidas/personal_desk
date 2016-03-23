@@ -1,0 +1,902 @@
+﻿<Application
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="App"
+	StartupUri="MainWindow.xaml"
+ShutdownMode="OnMainWindowClose">
+	<Application.Resources>
+		<!-- Resources scoped at the Application level should be defined here. -->
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Simple Styles.xaml"/>
+			</ResourceDictionary.MergedDictionaries>
+			<Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Rectangle x:Name="rectangle" HorizontalAlignment="Left" Width="41"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Stroke" TargetName="rectangle" Value="Black"/>
+									<Setter Property="Width" TargetName="rectangle" Value="41"/>
+									<Setter Property="Fill" TargetName="rectangle" Value="DarkOrange"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Rectangle x:Name="rectangle"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Stroke" TargetName="rectangle" Value="Black"/>
+									<Setter Property="Fill" TargetName="rectangle" Value="DarkOrange"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="TextBoxStyle1" TargetType="{x:Type TextBox}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type TextBox}">
+							<Grid>
+								<Rectangle x:Name="Rectangle1" Fill="#FFFFEF3D" Stroke="Black"/>
+							</Grid>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle5" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="Notes.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Margin" TargetName="image" Value="0,-20,0,20"/>
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle6" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="1720844115484237230.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-20,0,20"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle7" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="calendar.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-24.112,0,24.112"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle8" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="Windows_Journal_Viewer_Icon.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="VerticalAlignment" TargetName="image" Value="Stretch"/>
+									<Setter Property="Height" TargetName="image" Value="Auto"/>
+									<Setter Property="Margin" TargetName="image" Value="0,-17.362,0,17.362"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle9" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="mobile-phone.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-18,0,18"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle10" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="92866446.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-20,0,20"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle11" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="Lockcomputer.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-21,0,21"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle12" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="rss-ds.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,20,0,-20"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle13" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="rss.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,23.235,0,-23.235"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle100" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image Source="call.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle101" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle102" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.487,0.463" Source="hangup.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle2" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle14" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle15" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle16" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle17" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle18" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle19" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle20" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle21" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle22" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.494,0.477" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.497,0.497" Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle24" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image Source="0.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle25" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="dark_close_button.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle26" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="save.png" Stretch="Fill" ToolTip="Save"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle27" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" RenderTransformOrigin="0.5,0.5" Source="dark_close_button1.png" Stretch="Fill">
+									<Image.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="90"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Image.RenderTransform>
+								</Image>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle28" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image RenderTransformOrigin="0.5,0.5" Source="dark_close_button1.png" Stretch="Fill">
+									<Image.RenderTransform>
+										<TransformGroup>
+											<ScaleTransform/>
+											<SkewTransform/>
+											<RotateTransform Angle="90"/>
+											<TranslateTransform/>
+										</TransformGroup>
+									</Image.RenderTransform>
+								</Image>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle29" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="lock2.png" Stretch="Fill"/>
+								<ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,20,0,-20"/>
+									<Setter Property="HorizontalAlignment" TargetName="contentPresenter" Value="Stretch"/>
+									<Setter Property="VerticalAlignment" TargetName="contentPresenter" Value="Stretch"/>
+									<Setter Property="Margin" TargetName="contentPresenter" Value="27.116,20,27.116,-12.66"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle30" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="Google_logo_transparent.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="VerticalAlignment" TargetName="image" Value="Stretch"/>
+									<Setter Property="Height" TargetName="image" Value="Auto"/>
+									<Setter Property="Margin" TargetName="image" Value="0,-11.362,0,11.362"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle31" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="dark_close_button.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle32" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="info.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-8,0,8"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle33" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="question.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+									<Setter Property="Margin" TargetName="image" Value="0,-8,0,8"/>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+			<Style x:Key="ButtonStyle34" TargetType="{x:Type Button}">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="{x:Type Button}">
+							<Grid>
+								<Image x:Name="image" Source="dark_close_button.png" Stretch="Fill"/>
+								<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+							</Grid>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsMouseOver" Value="True">
+									<Setter Property="Effect" TargetName="image">
+										<Setter.Value>
+											<DropShadowEffect/>
+										</Setter.Value>
+									</Setter>
+								</Trigger>
+								<Trigger Property="IsFocused" Value="True"/>
+								<Trigger Property="IsDefaulted" Value="True"/>
+								<Trigger Property="IsMouseOver" Value="True"/>
+								<Trigger Property="IsPressed" Value="True"/>
+								<Trigger Property="IsEnabled" Value="False"/>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
